@@ -13,6 +13,6 @@ jobs:
       - name: Deploy to Netlify
         run: |
           npm install -g netlify-cli
-          netlify deploy --prod --auth=${{ secrets.NETLIFY_AUTH_TOKEN }}
+          netlify deploy --prod --create-site --auth=${{ secrets.NETLIFY_AUTH_TOKEN }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
